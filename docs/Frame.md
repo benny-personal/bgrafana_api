@@ -5,7 +5,7 @@ Each Field is well typed by its FieldType and supports optional Labels.  A Frame
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fields** | [**List[Field]**](Field.md) | Fields are the columns of a frame. All Fields must be of the same the length when marshalling the Frame for transmission. There should be no &#x60;nil&#x60; entries in the Fields slice (making them pointers was a mistake). | [optional] 
+**fields** | [**List[Field2]**](Field2.md) | Fields are the columns of a frame. All Fields must be of the same the length when marshalling the Frame for transmission. There should be no &#x60;nil&#x60; entries in the Fields slice (making them pointers was a mistake). | [optional] 
 **meta** | [**FrameMeta**](FrameMeta.md) |  | [optional] 
 **name** | **str** | Name is used in some Grafana visualizations. | [optional] 
 **ref_id** | **str** | RefID is a property that can be set to match a Frame to its originating query. | [optional] 

@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.0.1"
+__version__ = "0.0.4"
 
 # import apis into sdk package
 from bgrafana_api.api.access_control_api import AccessControlApi
@@ -187,7 +187,7 @@ from bgrafana_api.models.eval_match import EvalMatch
 from bgrafana_api.models.eval_queries_payload import EvalQueriesPayload
 from bgrafana_api.models.extended_receiver import ExtendedReceiver
 from bgrafana_api.models.failed_user import FailedUser
-from bgrafana_api.models.field import Field
+from bgrafana_api.models.field2 import Field2
 from bgrafana_api.models.field_config import FieldConfig
 from bgrafana_api.models.field_type_config import FieldTypeConfig
 from bgrafana_api.models.find_tags_result import FindTagsResult

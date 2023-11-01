@@ -23,7 +23,7 @@ from typing import Dict, Optional
 from pydantic import BaseModel, Field, StrictStr
 from bgrafana_api.models.field_config import FieldConfig
 
-class Field(BaseModel):
+class Field2(BaseModel):
     """
     A Field is essentially a slice of various types with extra properties and methods. See NewField() for supported types.  The slice data in the Field is a not exported, so methods on the Field are used to to manipulate its data.  # noqa: E501
     """
@@ -46,8 +46,8 @@ class Field(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Field:
-        """Create an instance of Field from a JSON string"""
+    def from_json(cls, json_str: str) -> Field2:
+        """Create an instance of Field2 from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -62,15 +62,15 @@ class Field(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> Field:
-        """Create an instance of Field from a dict"""
+    def from_dict(cls, obj: dict) -> Field2:
+        """Create an instance of Field2 from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return Field.parse_obj(obj)
+            return Field2.parse_obj(obj)
 
-        _obj = Field.parse_obj({
+        _obj = Field2.parse_obj({
             "config": FieldConfig.from_dict(obj.get("config")) if obj.get("config") is not None else None,
             "labels": obj.get("labels"),
             "name": obj.get("name")

@@ -21,14 +21,14 @@ import json
 
 from typing import List, Optional
 from pydantic import BaseModel, Field, StrictStr, conlist
-from bgrafana_api.models.field import Field
+from bgrafana_api.models.field2 import Field2
 from bgrafana_api.models.frame_meta import FrameMeta
 
 class Frame(BaseModel):
     """
     Each Field is well typed by its FieldType and supports optional Labels.  A Frame is a general data container for Grafana. A Frame can be table data or time series data depending on its content and field types.  # noqa: E501
     """
-    fields: Optional[conlist(Field)] = Field(None, alias="Fields", description="Fields are the columns of a frame. All Fields must be of the same the length when marshalling the Frame for transmission. There should be no `nil` entries in the Fields slice (making them pointers was a mistake).")
+    fields: Optional[conlist(Field2)] = Field(None, alias="Fields", description="Fields are the columns of a frame. All Fields must be of the same the length when marshalling the Frame for transmission. There should be no `nil` entries in the Fields slice (making them pointers was a mistake).")
     meta: Optional[FrameMeta] = Field(None, alias="Meta")
     name: Optional[StrictStr] = Field(None, alias="Name", description="Name is used in some Grafana visualizations.")
     ref_id: Optional[StrictStr] = Field(None, alias="RefID", description="RefID is a property that can be set to match a Frame to its originating query.")
@@ -80,7 +80,7 @@ class Frame(BaseModel):
             return Frame.parse_obj(obj)
 
         _obj = Frame.parse_obj({
-            "fields": [Field.from_dict(_item) for _item in obj.get("Fields")] if obj.get("Fields") is not None else None,
+            "fields": [Field2.from_dict(_item) for _item in obj.get("Fields")] if obj.get("Fields") is not None else None,
             "meta": FrameMeta.from_dict(obj.get("Meta")) if obj.get("Meta") is not None else None,
             "name": obj.get("Name"),
             "ref_id": obj.get("RefID")

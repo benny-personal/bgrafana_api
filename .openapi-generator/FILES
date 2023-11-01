@@ -167,7 +167,7 @@ bgrafana_api/models/eval_match.py
 bgrafana_api/models/eval_queries_payload.py
 bgrafana_api/models/extended_receiver.py
 bgrafana_api/models/failed_user.py
-bgrafana_api/models/field.py
+bgrafana_api/models/field2.py
 bgrafana_api/models/field_config.py
 bgrafana_api/models/field_type_config.py
 bgrafana_api/models/find_tags_result.py
@@ -509,7 +509,7 @@ docs/EvalMatch.md
 docs/EvalQueriesPayload.md
 docs/ExtendedReceiver.md
 docs/FailedUser.md
-docs/Field.md
+docs/Field2.md
 docs/FieldConfig.md
 docs/FieldTypeConfig.md
 docs/FindTagsResult.md
@@ -882,7 +882,7 @@ test/test_eval_match.py
 test/test_eval_queries_payload.py
 test/test_extended_receiver.py
 test/test_failed_user.py
-test/test_field.py
+test/test_field2.py
 test/test_field_config.py
 test/test_field_type_config.py
 test/test_find_tags_result.py

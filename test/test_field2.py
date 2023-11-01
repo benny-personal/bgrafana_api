@@ -16,10 +16,10 @@
 import unittest
 import datetime
 
-from bgrafana_api.models.field import Field  # noqa: E501
+from bgrafana_api.models.field2 import Field2  # noqa: E501
 
-class TestField(unittest.TestCase):
-    """Field unit test stubs"""
+class TestField2(unittest.TestCase):
+    """Field2 unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,16 +27,16 @@ class TestField(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> Field:
-        """Test Field
+    def make_instance(self, include_optional) -> Field2:
+        """Test Field2
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `Field`
+        # uncomment below to create an instance of `Field2`
         """
-        model = Field()  # noqa: E501
+        model = Field2()  # noqa: E501
         if include_optional:
-            return Field(
+            return Field2(
                 config = bgrafana_api.models.field_config_represents_the_display_properties_for_a_field/.FieldConfig represents the display properties for a Field.(
                     color = bgrafana_api.models.color.color(), 
                     custom = bgrafana_api.models.custom.custom(), 
@@ -89,12 +89,12 @@ class TestField(unittest.TestCase):
                 name = ''
             )
         else:
-            return Field(
+            return Field2(
         )
         """
 
-    def testField(self):
-        """Test Field"""
+    def testField2(self):
+        """Test Field2"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

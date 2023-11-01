@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bgrafana_api"
-version = "0.0.1"
+version = "0.0.4"
 description = "Grafana HTTP API."
 authors = ["Grafana Labs <hello@grafana.com>"]
 license = "NoLicense"
